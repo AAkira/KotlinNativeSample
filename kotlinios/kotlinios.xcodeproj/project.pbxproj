@@ -151,11 +151,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7CD1F89A2180505300903327 /* Build configuration list for PBXNativeTarget "kotlinios" */;
 			buildPhases = (
+				7CD1F8A72180589300903327 /* Run Script(kotlin native) */,
 				7CD1F86E2180505000903327 /* Sources */,
 				7CD1F86F2180505000903327 /* Frameworks */,
 				7CD1F8702180505000903327 /* Resources */,
 				7CD1F8A62180566300903327 /* Embed Frameworks */,
-				7CD1F8A72180589300903327 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -273,7 +273,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7CD1F8A72180589300903327 /* ShellScript */ = {
+		7CD1F8A72180589300903327 /* Run Script(kotlin native) */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -282,13 +282,14 @@
 			);
 			inputPaths = (
 			);
+			name = "Run Script(kotlin native)";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd ~/android/KotlinNativeSample/common/build/xcode-frameworks/\n./gradlew :common:packForXCode -PXCODE_CONFIGURATION=${CONFIGURATION}\n";
+			shellScript = "cd $SRCROOT/../common/build/xcode-frameworks/\n./gradlew :common:packForXCode -PXCODE_CONFIGURATION=${CONFIGURATION}\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -475,7 +476,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "~/android/KotlinNativeSample/common/build/xcode-frameworks";
+				FRAMEWORK_SEARCH_PATHS = "$SRCROOT/../common/build/xcode-frameworks";
 				INFOPLIST_FILE = kotlinios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -494,7 +495,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "~/android/KotlinNativeSample/common/build/xcode-frameworks";
+				FRAMEWORK_SEARCH_PATHS = "$SRCROOT/../common/build/xcode-frameworks";
 				INFOPLIST_FILE = kotlinios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
